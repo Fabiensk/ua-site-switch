@@ -13,8 +13,17 @@
     background-color: #D5D5D5;
     font-size: 1em;
   }
+  h2 {
+    background-color: #CCC;
+    font-size: 1.2em;
+  }
   input {
   width: 100%
+  }
+  .help {
+  font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+  font-size: 13px;
+  color: #777;
   }
   </style>
  
@@ -24,10 +33,11 @@
   <h1>User agent for this site</h1> 
   <h2>Site:</h2> 
   <div><input type="text" id="site"></input></div>
-  <h2>User Agent:</h2> 
+  <h2>User Agent:</h2>
   <div>
   <input type="text" id="ua"></input>
   </div>
+  <span class="help">(Set to blank to use default user-agent)</span>
  
 </body>
  
