@@ -1,15 +1,9 @@
 {
     "name": "ua-switch-auto", 
-    "license": "MPL 2.0", 
+    "license": "GPL 3", 
     "author": "Fabien Shum-King", 
-    "version": "0.1", 
+    "version": "0.2", 
     "fullName": "ua-switch-auto", 
     "id": "jid1-LpqjN3ZamAEzxQ", 
-    "description": "a basic add-on",
-    "preferences": [{
-        "name": "somePreference",
-        "title": "Some preference title",
-        "type": "string",
-        "value": "this is the default string value"
-    }]
+    "description": "A simple per-site user agent switcher for Firefox"
 }
