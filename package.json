@@ -2,7 +2,7 @@
     "name": "ua-switch-auto", 
     "license": "GPL 3", 
     "author": "Fabien Shum-King", 
-    "version": "0.2", 
+    "version": "0.3", 
     "fullName": "ua-switch-auto", 
     "id": "jid1-LpqjN3ZamAEzxQ", 
     "description": "A simple per-site user agent switcher for Firefox"
