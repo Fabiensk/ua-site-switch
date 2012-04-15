@@ -1,6 +1,6 @@
 A simple per-site user agent switcher for Firefox based on Jetpack. Left click
 on the yellow helmet icon to change the UA for the current site.
-The is currently no way to list all the customized sites.
+There is currently no way to list all the customized sites.
 
 LICENSE:
 
