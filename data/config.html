@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>Add site</title>
+	<style media="all" type="text/css">
+	body {
+	font: 100% arial, helvetica, sans-serif;
+	background-color: #F5F5F5;
+	}
+	h1 {
+	background-color: #D5D5D5;
+	font-size: 1em;
+	}
+	h2 {
+	background-color: #CCC;
+	font-size: 1.2em;
+	}
+	input {
+	width: 100%
+	}
+	.help {
+	font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+	font-size: 13px;
+	color: #777;
+	}
+	</style>
+	<style type="text/css">
+		ul.sites { padding: 0px }
+		li.sites { list-style-type: None; width: 100% }
+		.site { background-color: #BBB; }
+		.agent { padding-left: 2em;background-color: #DDD; }
+		.del { color: red; cursor: pointer }
+	</style>
+
+  <link type="text/css" href="css/overcast/jquery-ui-1.8.20.custom.css" rel="Stylesheet" />
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+</head>
+ 
+<body>
+	<h1>User Agent Site Switcher</h1> 
+	<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+	</script>
+	<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">This site</a></li>
+		<li><a href="#tabs-2">All sites</a></li>
+	</ul>
+	<div id="tabs-1">	
+		<h1>User agent for this site</h1> 
+		<h2>Site:</h2> 
+		<div><input type="text" id="site"></input></div>
+		<h2>User Agent:</h2>
+		<div>
+		<input type="text" id="ua"></input>
+		</div>
+		<span class="help">(Set to blank to use default user-agent)</span>
+	</div>
+	<div id="tabs-2">	
+		<h1>Customized sites</h1>
+		<ul id="sites" class="sites">
+			<li class="model sites" style="display:None">
+				<div class="site">
+					<span class="del">&#x2717;</span>
+					<span class="site">Site</span>
+				</div>
+				<div class="agent">Agent</div>
+			</li>
+		</ul>
+	</div>
+ 
+</body>
+ 
+</html>
