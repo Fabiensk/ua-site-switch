@@ -47,9 +47,6 @@
 <body>
 	<h1>User Agent Site Switcher</h1> 
 	<script>
-	$(function() {
-		$( "#tabs" ).tabs();
-	});
 	</script>
 	<div id="tabs">
 	<ul>
@@ -64,11 +61,12 @@
 		<div>
 		<input type="text" id="ua"></input>
 		</div>
-		<span class="help">(Set to blank to use default user-agent)</span>
+		<span class="help">(Set to blank to use default user-agent; Press enter to save or escape to cancel)</span>
 	</div>
 	<div id="tabs-2">	
 		<h1>Customized sites</h1>
 		<ul id="sites" class="sites">
+			<!-- model for list items-->
 			<li class="model sites" style="display:None">
 				<div class="ui-state-highlight">
 					<span class="del ui-icon ui-icon-circle-close"
