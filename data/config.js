@@ -6,9 +6,10 @@ function onDel(evt, site) {
 	self.postMessage(["remove", site]);
 }
 
+$( "#tabs" ).tabs();
+
 // init the config window
 self.on('message', function(param) {
-	$( "#tabs" ).tabs();
 	// current site
 	if (param[0]==null) {
 		// not a site
