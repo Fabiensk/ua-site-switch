@@ -28,11 +28,16 @@ self.on('message', function(param) {
 		ua.focus();
 		ua.select();
 	}
+	
+	var checkbox = $('#enabled');
+	checkbox.attr("checked", param[2]);
+	checkbox.change(function(evt){
+		self.postMessage(["enable", evt.target.checked]);
+		});
 
 	// all sites
-	var all = param[2];
+	var all = param[3];
     var sites = document.getElementById('sites');
-	console.log("All:", all);
 	$.each(all, function(site, agent) {
 		console.log("Adding:", site, agent);
 		var model = $(".model")

@@ -17,6 +17,9 @@
 	background-color: #CCC;
 	font-size: 1.2em;
 	}
+	.enable {
+		padding: 0.7em
+	}
 	input {
 	width: 100%
 	}
@@ -25,18 +28,16 @@
 	font-size: 13px;
 	color: #777;
 	}
-	</style>
-	<style type="text/css">
-		ul.sites { padding: 0px }
-		li.sites {
-			list-style-type: None; width: 100%;
-			font-family: Trebuchet MS,Helvetica,Arial,sans-serif;
-			font-size: 1.1em;
-			margin-bottom: 5px;
-			}
-		.site {  }
-		.agent { padding-left: 2em;background-color: #DDD; }
-		.del { color: red; cursor: pointer }
+	ul.sites { padding: 0px }
+	li.sites {
+		list-style-type: None; width: 100%;
+		font-family: Trebuchet MS,Helvetica,Arial,sans-serif;
+		font-size: 1.1em;
+		margin-bottom: 5px;
+		}
+	.site {  }
+	.agent { padding-left: 2em;background-color: #DDD; }
+	.del { color: red; cursor: pointer }
 	</style>
 
   <link type="text/css" href="css/overcast/jquery-ui-1.8.20.custom.css" rel="Stylesheet" />
@@ -44,8 +45,7 @@
  
 <body>
 	<h1>User Agent Site Switcher</h1> 
-	<script>
-	</script>
+	<div class="ui-state-highlight enable"><label for="enabled">Enabled: </label><input id="enabled" type="checkbox"/></div>
 	<div id="tabs">
 	<ul>
 		<li><a href="#tabs-1">This site</a></li>
