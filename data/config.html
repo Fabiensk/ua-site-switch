@@ -1,81 +1,83 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
- 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-  <title>Add site</title>
-	<style media="all" type="text/css">
-	body {
-	font: 70% "Trebuchet MS", sans-serif;
-	background-color: #F5F5F5;
-	}
-	h1 {
-	background-color: #D5D5D5;
-	font-size: 1em;
-	}
-	h2 {
-	background-color: #CCC;
-	font-size: 1.2em;
-	}
-	.enable {
-		padding: 0.7em
-	}
-	input[type="text"] {
-	width: 100%
-	}
-	.help {
-	font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
-	font-size: 13px;
-	color: #777;
-	}
-	ul.sites { padding: 0px }
-	li.sites {
-		list-style-type: None; width: 100%;
-		font-family: Trebuchet MS,Helvetica,Arial,sans-serif;
-		font-size: 1.1em;
-		margin-bottom: 5px;
-		}
-	.site {  }
-	.agent { padding-left: 2em;background-color: #DDD; }
-	.del { color: red; cursor: pointer }
-	</style>
 
-  <link type="text/css" href="css/overcast/jquery-ui-1.8.20.custom.css" rel="Stylesheet" />
-</head>
- 
-<body>
-	<h1>User Agent Site Switcher</h1> 
-	<div class="ui-state-highlight enable"><label for="enabled">Enabled: </label><input id="enabled" type="checkbox"/></div>
-	<div id="tabs">
-	<ul>
-		<li><a href="#tabs-1">This site</a></li>
-		<li><a href="#tabs-2">All sites</a></li>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Add domain</title>
+    <style media="all" type="text/css">
+      body {
+      font: 70% "Trebuchet MS", sans-serif;
+      background-color: #F5F5F5;
+      }
+      h1 {
+      background-color: #D5D5D5;
+      font-size: 1em;
+      }
+      h2 {
+      background-color: #CCC;
+      font-size: 1.2em;
+      }
+      .enable {
+      padding: 0.7em
+      }
+      input[type="text"] {
+      width: 100%
+      }
+      .help {
+      font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+      font-size: 13px;
+      color: #777;
+      }
+      ul.sites { padding: 0px }
+      li.sites {
+      list-style-type: None; width: 100%;
+      font-family: Trebuchet MS,Helvetica,Arial,sans-serif;
+      font-size: 1.1em;
+      margin-bottom: 5px;
+      }
+      .site {  }
+      .agent { padding-left: 2em;background-color: #DDD; }
+      .del { color: red; cursor: pointer }
+    </style>
+
+    <link type="text/css" href="css/overcast/jquery-ui-1.8.20.custom.css" rel="Stylesheet" />
+  </head>
+  
+  <body>
+    <h1>User Agent Site Switcher</h1> 
+    <div class="ui-state-highlight enable"><label for="enabled">Enabled: </label><input id="enabled" type="checkbox"/></div>
+    <div id="tabs">
+      <ul>
+	<li><a href="#tabs-1">This site</a></li>
+	<li><a href="#tabs-2">All sites</a></li>
+      </ul>
+      <div id="tabs-1">	
+	<h1>User agent for this site</h1> 
+	<h2>Site:</h2> 
+	<div><input type="text" id="site"></input></div>
+	<h2>User Agent:</h2>
+	<div>
+	  <input type="text" id="ua"></input>
+	</div>
+	<h2>Match subdomains: <input type="checkbox" id="subdomain"></input></h2>
+	<span class="help">(Set to blank to use default user-agent; Press enter to save or escape to cancel)</span>
+      </div>
+
+      <div id="tabs-2">	
+	<h1>Customized sites</h1>
+	<ul id="sites" class="sites">
+	  <!-- model for list items-->
+	  <li class="model sites" style="display:None">
+	    <div class="ui-state-highlight">
+	      <span class="del ui-icon ui-icon-circle-close"
+		    style="float: left; margin-right: .3em;"></span>
+	      <span class="site">Site</span>
+	    </div>
+	    <div class="agent ui-state-highlight">Agent</div>
+	  </li>
 	</ul>
-	<div id="tabs-1">	
-		<h1>User agent for this site</h1> 
-		<h2>Site:</h2> 
-		<div><input type="text" id="site"></input></div>
-		<h2>User Agent:</h2>
-		<div>
-		<input type="text" id="ua"></input>
-		</div>
-		<span class="help">(Set to blank to use default user-agent; Press enter to save or escape to cancel)</span>
-	</div>
-	<div id="tabs-2">	
-		<h1>Customized sites</h1>
-		<ul id="sites" class="sites">
-			<!-- model for list items-->
-			<li class="model sites" style="display:None">
-				<div class="ui-state-highlight">
-					<span class="del ui-icon ui-icon-circle-close"
-					style="float: left; margin-right: .3em;"></span>
-					<span class="site">Site</span>
-				</div>
-				<div class="agent ui-state-highlight">Agent</div>
-			</li>
-		</ul>
-	</div>
- 
-</body>
- 
+      </div>
+    </div>
+  </body>
+  
 </html>

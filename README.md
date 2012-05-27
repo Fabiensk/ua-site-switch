@@ -1,6 +1,6 @@
 A simple per-site user agent switcher for Firefox based on Jetpack. Left click
-on the yellow helmet icon to change the UA for the current site or to delete
-customized sites.
+on the yellow helmet icon (addon bar) to change the UA for the current site
+or to delete customized sites.
 
 [Installation page](https://addons.mozilla.org/fr/firefox/addon/ua-site-switch/)
 
