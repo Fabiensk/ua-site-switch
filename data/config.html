@@ -45,26 +45,26 @@
   
   <body>
     <h1>User Agent Site Switcher</h1> 
-    <div class="ui-state-highlight enable"><label for="enabled">Enabled: </label><input id="enabled" type="checkbox"/></div>
+    <div class="ui-state-highlight enable"><label for="enabled"><span data-l10n-id="cfg_enabled">Enabled</span>: </label><input id="enabled" type="checkbox"/></div>
     <div id="tabs">
       <ul>
-	<li><a href="#tabs-1">This site</a></li>
-	<li><a href="#tabs-2">All sites</a></li>
+	<li><a href="#tabs-1" data-l10n-id="cfg_this_site">This site</a></li>
+	<li><a href="#tabs-2" data-l10n-id="cfg_all_sites">All sites</a></li>
       </ul>
       <div id="tabs-1">	
-	<h1>User agent for this site</h1> 
-	<h2>Site:</h2> 
+	<h1 data-l10n-id="cfg_site_title">User agent for this site</h1> 
+	<h2><span data-l10n-id="cfg_site_site">Site</span>:</h2> 
 	<div><input type="text" id="site"></input></div>
-	<h2>User Agent:</h2>
+	<h2 data-l10n-id="cfg_site_ua">User Agent:</h2>
 	<div>
 	  <input type="text" id="ua"></input>
 	</div>
-	<h2>Match subdomains: <input type="checkbox" id="subdomain"></input></h2>
-	<span class="help">(Set to blank to use default user-agent; Press enter to save or escape to cancel)</span>
+	<h2 data-l10n-id="cfg_subdomains">Match subdomains: <input type="checkbox" id="subdomain"></input></h2>
+	<span class="help" data-l10n-id="cfg_help">(Set to blank to use default user-agent; Press enter to save or escape to cancel)</span>
       </div>
 
       <div id="tabs-2">	
-	<h1>Customized sites</h1>
+	<h1 data-l10n-id="cfg_sites_h1">Customized sites</h1>
 	<ul id="sites" class="sites">
 	  <!-- model for list items-->
 	  <li class="model sites" style="display:None">

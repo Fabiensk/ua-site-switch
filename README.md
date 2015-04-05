@@ -4,6 +4,9 @@ or to delete customized sites.
 
 [Installation page](https://addons.mozilla.org/fr/firefox/addon/ua-site-switch/)
 
+The files "lib/menu-button.js" and "lib/view.js" are under the Mozilla Public License 2.0.
+The rest of the program is under the GPL 3.0 license.
+
 LICENSE:
 
 This program is free software: you can redistribute it and/or modify
