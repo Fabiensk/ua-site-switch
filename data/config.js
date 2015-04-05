@@ -64,7 +64,7 @@ self.on('message', function(param) {
 	var all = param[3];
     var sites = document.getElementById('sites');
 	$.each(all, function(site, agent) {
-		console.log("Adding:", site, agent);
+		// console.log("Adding:", site, agent);
 		var site_label = site;
 		if (site_label.substr(0, 1)==".") {
 				site_label = site_label.substr(1) + " (and subdomains)";
