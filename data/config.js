@@ -20,7 +20,7 @@
   along with this program. If not, see <http://www.gnu.org/licenses/>.
   
   **** END LICENSE BLOCK ***** */
-var ua = document.getElementById('ua');
+var ua = null;
 
 // delete an entry
 function onDel(evt, domain) {
@@ -28,21 +28,23 @@ function onDel(evt, domain) {
 	self.postMessage(["remove", domain]);
 }
 
-$( "#tabs" ).tabs();
+$(function(){
+    ua = document.getElementById('ua');
+    $( "#tabs" ).tabs();
+});
 
 // init the config window
 self.on('message', function(param) {
 	// current domain
 	if (param[0]==null) {
 		// not a domain
-		$('#tabs').tabs("select", 1);
-		$('#tabs').tabs("option","disabled", [0]);
+        $('#tabs').tabs({ active: 1, disabled: [0] });
 	} else {
 		// callback on enter: save
 		$("#tabs-1").keyup( function(event) {
 		if (event.keyCode == 13) {
 			  var sub = "";
-			  if ($("#subdomain").attr('checked'))
+			  if ($("#subdomain").prop("checked"))
 				sub = ".";
 			  self.postMessage(["add", sub+$("#site").val(), ua.value]);
 		  }
@@ -55,7 +57,7 @@ self.on('message', function(param) {
 	}
 	
 	var checkbox = $('#enabled');
-	checkbox.attr("checked", param[2]);
+	checkbox.prop("checked", param[2]);
 	checkbox.change(function(evt){
 		self.postMessage(["enable", evt.target.checked]);
 		});
