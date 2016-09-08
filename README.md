@@ -2,7 +2,7 @@ A simple per-site user agent switcher for Firefox based on Jetpack. Left click
 on the yellow helmet icon (addon bar) to change the UA for the current site
 or to delete customized sites.
 
-[Installation page](https://addons.mozilla.org/fr/firefox/addon/ua-site-switch/)
+[Installation page](https://addons.mozilla.org/firefox/addon/ua-site-switch/)
 
 The files "lib/menu-button.js" and "lib/view.js" are under the Mozilla Public License 2.0.
 The rest of the program is under the GPL 3.0 license.
